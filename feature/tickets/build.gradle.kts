@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.tickets"
+    namespace = "com.example.feature_tickets"
     compileSdk = 34
 
     defaultConfig {

@@ -40,18 +40,18 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:network"))
-    implementation(project(":core:data"))
-    implementation(project(":core:domain"))
-    implementation(project(":core:model"))
-    implementation(project(":core:common"))
-    implementation(project(":core:designsystem"))
+    api(project(":core:network"))
+    api(project(":core:data"))
+    api(project(":core:domain"))
+    api(project(":core:model"))
+    api(project(":core:common"))
+    api(project(":core:designsystem"))
 
-    implementation(project(":feature:short"))
-    implementation(project(":feature:hotels"))
-    implementation(project(":feature:tickets"))
-    implementation(project(":feature:subscriptions"))
-    implementation(project(":feature:profile"))
+    api(project(":feature:short"))
+    api(project(":feature:hotels"))
+    api(project(":feature:tickets"))
+    api(project(":feature:subscriptions"))
+    api(project(":feature:profile"))
 
     implementation(libs.dagger)
     ksp(libs.dagger.compiler)

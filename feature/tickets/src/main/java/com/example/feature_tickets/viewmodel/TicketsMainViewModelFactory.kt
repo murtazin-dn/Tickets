@@ -1,4 +1,4 @@
-package com.example.tickets.viewmodel
+package com.example.feature_tickets.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

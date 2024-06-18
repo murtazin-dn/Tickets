@@ -1,4 +1,4 @@
-package com.example.tickets.di
+package com.example.feature_tickets.di
 
 import com.example.domain.usecase.GetFromTextUseCase
 import com.example.domain.usecase.GetOffersUseCase

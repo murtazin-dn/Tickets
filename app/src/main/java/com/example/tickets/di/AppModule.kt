@@ -5,6 +5,7 @@ import com.example.domain.usecase.GetOffersUseCase
 import com.example.domain.usecase.GetTicketsOfferUseCase
 import com.example.domain.usecase.GetTicketsUseCase
 import com.example.domain.usecase.SaveFromTextUseCase
+import com.example.feature_tickets.di.TicketsFeatureDependencies
 import dagger.Module
 
 @Module
@@ -17,7 +18,7 @@ internal class AppModule{
         getTicketsUseCase: GetTicketsUseCase,
         getFromTextUseCase: GetFromTextUseCase,
         saveFromTextUseCase: SaveFromTextUseCase,
-    ): TicketsFeatureDependencies{
+    ): TicketsFeatureDependencies {
         return object : TicketsFeatureDependencies {
             override val providesGetOffersUseCase = getOffersUseCase
             override val providesGetTicketsOffersUseCase = getTicketsOffersUseCase

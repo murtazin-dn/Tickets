@@ -1,4 +1,4 @@
-package com.example.tickets.adpter
+package com.example.feature_tickets.adpter
 
 import android.view.View
 import com.example.common.datetime.calculateTimeDifference
@@ -6,8 +6,8 @@ import com.example.common.datetime.formatDepartureArrivalTime
 import com.example.model.ticket.Ticket
 import com.example.designsystem.R
 import com.example.common.ext.formatIntWithSpaces
-import com.example.tickets.databinding.TicketItemBinding
-import com.example.tickets.databinding.TicketItemNoBadgeBinding
+import com.example.feature_tickets.databinding.TicketItemBinding
+import com.example.feature_tickets.databinding.TicketItemNoBadgeBinding
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
 

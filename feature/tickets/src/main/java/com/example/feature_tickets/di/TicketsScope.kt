@@ -1,4 +1,4 @@
-package com.example.tickets.di
+package com.example.feature_tickets.di
 
 import javax.inject.Scope
 

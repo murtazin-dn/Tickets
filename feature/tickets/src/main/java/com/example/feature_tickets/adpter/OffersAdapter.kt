@@ -1,4 +1,4 @@
-package com.example.tickets.adpter
+package com.example.feature_tickets.adpter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide
 import com.example.model.offer.Offer
 import com.example.common.ext.formatIntWithSpaces
 import com.example.designsystem.R
-import com.example.tickets.databinding.OfferCardBinding
+import com.example.feature_tickets.databinding.OfferCardBinding
 
 class OffersAdapter: RecyclerView.Adapter<OffersAdapter.OffersViewHolder>() {
 

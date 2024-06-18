@@ -1,9 +1,10 @@
-package com.example.tickets.viewmodel
+package com.example.feature_tickets.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.common.SingleLiveEvent
 import com.example.common.result.Result
 import com.example.domain.usecase.GetFromTextUseCase
 import com.example.domain.usecase.GetOffersUseCase
@@ -21,12 +22,12 @@ class TicketsMainViewModel(
     val offers: LiveData<List<Offer>> = _offers
     private val _fromText: MutableLiveData<String> = MutableLiveData()
     val fromText: LiveData<String> = _fromText
+    val error = SingleLiveEvent<String?>()
 
     fun getOffers(){
         viewModelScope.launch {
-            val result = getOffersUseCase.execute()
-            when(result){
-                is Result.Error -> TODO()
+            when(val result = getOffersUseCase.execute()){
+                is Result.Error -> error.postValue(result.message)
                 is Result.Success -> _offers.value = (result.value)
             }
         }

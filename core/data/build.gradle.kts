@@ -34,9 +34,9 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:model"))
-    implementation(project(":core:common"))
-    implementation(project(":core:network"))
+    api(project(":core:model"))
+    api(project(":core:common"))
+    api(project(":core:network"))
 
     implementation(libs.dagger)
     ksp(libs.dagger.compiler)
