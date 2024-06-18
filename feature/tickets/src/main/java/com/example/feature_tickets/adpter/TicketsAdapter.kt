@@ -1,4 +1,4 @@
-package com.example.tickets.adpter
+package com.example.feature_tickets.adpter
 
 import android.view.View
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import com.example.common.datetime.formatDepartureArrivalTime
 import com.example.designsystem.R
 import com.example.model.ticket.Ticket
 import com.example.common.ext.formatIntWithSpaces
-import com.example.tickets.databinding.TicketItemBinding
+import com.example.feature_tickets.databinding.TicketItemBinding
 
 class TicketsAdapter: RecyclerView.Adapter<TicketsAdapter.TicketsViewHolder>() {
 

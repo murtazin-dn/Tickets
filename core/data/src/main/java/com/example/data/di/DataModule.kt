@@ -12,6 +12,7 @@ import com.example.data.repository.CacheRepository
 import com.example.data.repository.CacheSharePrefsRepository
 import com.example.data.repository.DefaultOffersRepository
 import com.example.data.repository.OffersRepository
+import com.example.data.repository.OfflineOffersRepository
 import com.example.model.offer.Offer
 import com.example.model.ticket.Arrival
 import com.example.model.ticket.Departure
@@ -63,15 +64,27 @@ internal class DataModule {
         context
     )
 
+//    @Provides
+//    @DataScope
+//    fun provideDefaultOffersRepository(
+//        networkDataSource: TicketsNetworkDataSource,
+//        ticketsOfferMapper: TicketsOfferMapper,
+//        ticketMapper: TicketMapper,
+//        offerMapper: OfferMapper
+//    ): OffersRepository = DefaultOffersRepository(
+//        ticketsNetworkDataSource = networkDataSource,
+//        ticketsOfferMapper = ticketsOfferMapper,
+//        ticketsMapper = ticketMapper,
+//        offerMapper = offerMapper
+//    )
+
     @Provides
     @DataScope
-    fun provideOffersRepository(
-        networkDataSource: TicketsNetworkDataSource,
+    fun provideOfflineOffersRepository(
         ticketsOfferMapper: TicketsOfferMapper,
         ticketMapper: TicketMapper,
         offerMapper: OfferMapper
-    ): OffersRepository = DefaultOffersRepository(
-        ticketsNetworkDataSource = networkDataSource,
+    ): OffersRepository = OfflineOffersRepository(
         ticketsOfferMapper = ticketsOfferMapper,
         ticketsMapper = ticketMapper,
         offerMapper = offerMapper

@@ -1,4 +1,4 @@
-package com.example.tickets.adpter
+package com.example.feature_tickets.adpter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.common.ext.formatIntWithSpaces
 import com.example.model.ticketoffer.TicketsOffer
 import com.example.designsystem.R
-import com.example.tickets.databinding.TicketsOfferItemBinding
+import com.example.feature_tickets.databinding.TicketsOfferItemBinding
 
 class TicketsOffersAdapter: RecyclerView.Adapter<TicketsOffersAdapter.TicketsOffersViewHolder>() {
 

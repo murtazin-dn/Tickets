@@ -1,4 +1,4 @@
-package com.example.tickets
+package com.example.feature_tickets
 
 
 const val FROM_TEXT = "from_text"
