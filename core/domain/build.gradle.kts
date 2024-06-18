@@ -34,13 +34,13 @@ android {
 }
 
 dependencies {
-    api(project(":core:common"))
-    api(project(":core:model"))
-    api(project(":core:data"))
+    implementation(project(":core:common"))
+    implementation(project(":core:model"))
+    implementation(project(":core:data"))
 
     implementation(libs.dagger)
     ksp(libs.dagger.compiler)
-    
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

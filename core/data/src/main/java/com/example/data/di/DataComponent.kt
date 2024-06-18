@@ -1,6 +1,5 @@
 package com.example.data.di
 
-import android.app.Application
 import android.content.Context
 import com.example.data.repository.CacheRepository
 import com.example.data.repository.OffersRepository
@@ -15,7 +14,7 @@ interface DataComponent {
     @Component.Builder
     interface Builder{
         @BindsInstance
-        fun application(application: Context): Builder
+        fun context(context: Context): Builder
         fun networkComponent(networkComponent: NetworkComponent): Builder
         fun build(): DataComponent
     }

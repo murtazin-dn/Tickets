@@ -34,18 +34,30 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
-    api(project(":core:network"))
-    api(project(":core:data"))
-    api(project(":core:domain"))
-    api(project(":core:model"))
-    api(project(":core:common"))
+    implementation(project(":core:network"))
+    implementation(project(":core:data"))
+    implementation(project(":core:domain"))
+    implementation(project(":core:model"))
+    implementation(project(":core:common"))
+    implementation(project(":core:designsystem"))
+
+    implementation(project(":feature:short"))
+    implementation(project(":feature:hotels"))
+    implementation(project(":feature:tickets"))
+    implementation(project(":feature:subscriptions"))
+    implementation(project(":feature:profile"))
 
     implementation(libs.dagger)
     ksp(libs.dagger.compiler)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.navigation.ui)
+    implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)

@@ -11,13 +11,13 @@ import com.example.tickets.di.DaggerAppComponent
 
 class TicketsApp: Application() {
 
-    val networkComponent: NetworkComponent by lazy {
+    private val networkComponent: NetworkComponent by lazy {
         DaggerNetworkComponent.builder().build()
     }
-    val dataComponent: DataComponent by lazy {
-        DaggerDataComponent.builder().application(this).networkComponent(networkComponent).build()
+    private val dataComponent: DataComponent by lazy {
+        DaggerDataComponent.builder().context(this).networkComponent(networkComponent).build()
     }
-    val domainComponent: DomainComponent by lazy {
+    private val domainComponent: DomainComponent by lazy {
         DaggerDomainComponent.builder().dataComponent(dataComponent).build()
     }
 

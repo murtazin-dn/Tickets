@@ -6,7 +6,6 @@ import com.example.domain.usecase.GetOffersUseCase
 import com.example.domain.usecase.GetTicketsOfferUseCase
 import com.example.domain.usecase.GetTicketsUseCase
 import com.example.domain.usecase.SaveFromTextUseCase
-import dagger.BindsInstance
 import dagger.Component
 
 @DomainScope
