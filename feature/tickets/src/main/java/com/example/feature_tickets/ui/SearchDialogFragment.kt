@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.FrameLayout
+import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.example.common.ext.setNavigationResult
 import com.example.common.ext.toEditable
@@ -54,8 +56,20 @@ class SearchDialogFragment : BottomSheetDialogFragment() {
 
         binding.etWhere.setOnEditorActionListener{ v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
-                navigateToSearchCountrySelected(binding.etWhere.text.toString())
-                true
+                val text = binding.etWhere.text.toString()
+                if (text.isNotEmpty()) {
+                    navigateToSearchCountrySelected(text)
+                    true
+                }
+                else {
+                    Toast.makeText(
+                        requireContext(),
+                        com.example.designsystem.R.string.from_empty,
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    binding.etWhere.clearFocus()
+                    false
+                }
             } else false
         }
 
@@ -90,7 +104,6 @@ class SearchDialogFragment : BottomSheetDialogFragment() {
             binding.etFrom.text = resources.getString(com.example.designsystem.R.string.hint_from)
             binding.etFrom.setTextColor(resources.getColor(com.example.designsystem.R.color.grey6))
         }
-        binding.etWhere.setImeActionLabel("done", EditorInfo.IME_ACTION_DONE)
 
         binding.etWhere.filters = arrayOf(CyrillicInputFilter())
     }

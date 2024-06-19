@@ -32,5 +32,7 @@
     <string name="slash">/</string>
     <string name="dash">—</string>
     <string name="title_travel_time">%1$sч в пути</string>
+    <string name="from_empty">Поле "Откуда" не может быть пустым</string>
+    <string name="where_empty">Поле "Куда" не может быть пустым</string>
     <string name="error">Ошибка</string>
 </resources>

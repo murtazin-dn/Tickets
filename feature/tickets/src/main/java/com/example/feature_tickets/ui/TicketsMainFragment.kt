@@ -58,10 +58,10 @@ class TicketsMainFragment : Fragment() {
                 FROM_TEXT to fromText,
                 WHERE_TEXT to whereText
             )
-//            findNavController().navigate(
-//                R.id.action_navigation_air_tickets_to_countrySelectedFragment2,
-//                bundle
-//            )
+            findNavController().navigate(
+                R.id.action_navigation_air_tickets_to_countrySelectedFragment2,
+                bundle
+            )
         }
         _binding = FragmentTicketsMainBinding.inflate(inflater, container, false)
         return binding.root
@@ -96,7 +96,7 @@ class TicketsMainFragment : Fragment() {
                     else {
                         Toast.makeText(
                             requireContext(),
-                            "Поле \"Откуда\" не может быть пустым",
+                            com.example.designsystem.R.string.from_empty,
                             Toast.LENGTH_SHORT
                         ).show()
                         binding.etWhere.clearFocus()

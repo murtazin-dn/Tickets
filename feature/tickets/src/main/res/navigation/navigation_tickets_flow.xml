@@ -12,9 +12,9 @@
         <action
             android:id="@+id/action_navigation_air_tickets_to_searchDialogFragment"
             app:destination="@id/searchDialogFragment" />
-<!--        <action-->
-<!--            android:id="@+id/action_navigation_air_tickets_to_countrySelectedFragment2"-->
-<!--            app:destination="@id/countrySelectedFragment2" />-->
+        <action
+            android:id="@+id/action_navigation_air_tickets_to_countrySelectedFragment2"
+            app:destination="@id/countrySelectedFragment2" />
     </fragment>
     <dialog
         android:id="@+id/searchDialogFragment"
@@ -45,17 +45,17 @@
         android:name="com.example.feature_tickets.ui.SearchFragment1"
         tools:layout="@layout/fragment_search1"
         android:label="fragment_search1" />
-<!--    <fragment-->
-<!--        android:id="@+id/countrySelectedFragment2"-->
-<!--        android:name="com.example.testtaskavia.presentation.ui.CountrySelectedFragment"-->
-<!--        android:label="CountrySelectedFragment" >-->
-<!--        <action-->
-<!--            android:id="@+id/action_countrySelectedFragment2_to_ticketsFragment"-->
-<!--            app:destination="@id/ticketsFragment" />-->
-<!--    </fragment>-->
-<!--    <fragment-->
-<!--        android:id="@+id/ticketsFragment"-->
-<!--        android:name="com.example.testtaskavia.presentation.ui.TicketsFragment"-->
-<!--        android:label="fragment_tickets"-->
-<!--        tools:layout="@layout/fragment_tickets_main" />-->
+    <fragment
+        android:id="@+id/countrySelectedFragment2"
+        android:name="com.example.feature_tickets.ui.CountrySelectedFragment"
+        android:label="CountrySelectedFragment" >
+        <action
+            android:id="@+id/action_countrySelectedFragment2_to_ticketsFragment"
+            app:destination="@id/ticketsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ticketsFragment"
+        android:name="com.example.feature_tickets.ui.TicketsFragment"
+        android:label="fragment_tickets"
+        tools:layout="@layout/fragment_tickets_main" />
 </navigation>

@@ -70,7 +70,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="@string/hint_where"/>
+                    android:hint="@string/hint_where"
+                    android:lines="1"
+                    android:imeActionLabel="Done"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"/>
 
 
                 <ImageView
