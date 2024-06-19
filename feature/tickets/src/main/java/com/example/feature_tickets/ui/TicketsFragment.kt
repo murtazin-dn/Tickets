@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -57,6 +58,9 @@ class TicketsFragment : Fragment() {
         viewModel.tickets.observe(viewLifecycleOwner){ tickets ->
             adapter.items = tickets
             adapter.notifyDataSetChanged()
+        }
+        viewModel.error.observe(viewLifecycleOwner) {
+            Toast.makeText(requireContext(), com.example.designsystem.R.string.error, Toast.LENGTH_SHORT).show()
         }
 
         val fromText = arguments?.getString(FROM_TEXT, null)
